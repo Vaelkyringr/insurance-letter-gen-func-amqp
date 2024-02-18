@@ -1,2 +1,2 @@
 # insurance-letter-gen-func-amqp
-An azure functions that consumes insurance data and generates PDF insurance letters 
+An azure function that consumes insurance data and generates and stores PDF insurance letters 
