@@ -1,6 +1,6 @@
 ﻿namespace InsuranceLetterGen.Services.Storage;
 
-public class BlobStorageService
+public class BlobStorageService : IBlobStorageService
 {
 
 }
