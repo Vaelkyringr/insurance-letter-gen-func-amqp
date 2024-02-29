@@ -1,10 +1,6 @@
-using System.Net;
 using InsuranceLetterGen.Services.Document;
 using InsuranceLetterGen.Services.Models;
 using InsuranceLetterGen.Services.Storage;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker.Http;
-using Microsoft.Extensions.Logging;
 
 namespace InsuranceLetterGen.Functions;
 
