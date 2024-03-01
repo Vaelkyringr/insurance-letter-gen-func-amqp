@@ -2,9 +2,11 @@
 
 public class Insurance
 {
-    public string InsuranceNumber { get; set; } = null!;
+    public string InsuranceNumber { get; init; } = null!;
 
     public decimal YearlyPremium { get; set; }
 
-    public string Description { get; set; } = null!;
+    public DateTime StartPeriod { get; init; }
+
+    public DateTime EndPeriod { get; init; }
 }

@@ -15,20 +15,20 @@ public class DocumentService : IDocumentService
                 page.Size(PageSizes.A4);
                 page.Margin(2, Unit.Centimetre);
                 page.PageColor(Colors.White);
-                page.DefaultTextStyle(x => x.FontSize(20));
+                page.DefaultTextStyle(x => x.FontSize(16));
 
                 page.Header()
-                    .Text("Hello PDF!")
-                    .SemiBold().FontSize(36).FontColor(Colors.Blue.Medium);
+                    .Text($"Insurance {insurance.InsuranceNumber}")
+                    .SemiBold().FontSize(30).FontColor(Colors.Blue.Medium);
 
                 page.Content()
                     .PaddingVertical(1, Unit.Centimetre)
                     .Column(x =>
                     {
                         x.Spacing(20);
-
+                        x.Item().Text($"Premium: {insurance.YearlyPremium}");
+                        x.Item().Text($"Period: {insurance.StartPeriod} - {insurance.EndPeriod}");
                         x.Item().Text(Placeholders.LoremIpsum());
-                        x.Item().Image(Placeholders.Image(200, 100));
                     });
 
                 page.Footer()
