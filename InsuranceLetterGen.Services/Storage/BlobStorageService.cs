@@ -1,7 +1,4 @@
-﻿using Azure.Storage.Blobs;
-using Microsoft.Extensions.Configuration;
-
-namespace InsuranceLetterGen.Services.Storage;
+﻿namespace InsuranceLetterGen.Services.Storage;
 
 public class BlobStorageService : IBlobStorageService
 {
