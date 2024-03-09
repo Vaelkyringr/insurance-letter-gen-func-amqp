@@ -18,12 +18,12 @@ public class Main
     }
 
     [Function("InsuranceLetterGen")]
-    public async Task Run([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
+    public async Task Run([RabbitMQTrigger("Insurance", ConnectionStringSetting = "DefaultQueueConnection")] string queueItem)
     {
-        _logger.LogInformation("C# HTTP trigger function processed a request.");
+        _logger.LogInformation($"C# Queue trigger function processed: {queueItem}");
 
-        // Create insurance letter
-        var insurance = new Insurance { InsuranceNumber = "ABDHSKE" };
+        // Create letter document
+        var insurance = JsonConvert.DeserializeObject<Insurance>(queueItem);
         var document = _documentService.CreateInsuranceDocument(insurance);
 
         // Store letter

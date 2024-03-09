@@ -2,8 +2,7 @@
   "profiles": {
     "InsuranceLetterGen.Functions": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7024",
-      "launchBrowser": false
+      "commandLineArgs": "--port 7024"
     }
   }
 }
