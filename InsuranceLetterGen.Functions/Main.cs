@@ -17,6 +17,7 @@ public class Main
         _logger = loggerFactory.CreateLogger<Main>();
     }
 
+    /// TODO: Replace with queue trigger
     [Function("InsuranceLetterGen")]
     public async Task Run([RabbitMQTrigger("Insurance", ConnectionStringSetting = "DefaultQueueConnection")] string queueItem)
     {
