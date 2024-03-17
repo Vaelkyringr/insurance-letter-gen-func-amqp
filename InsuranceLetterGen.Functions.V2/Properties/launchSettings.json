@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "InsuranceLetterGen.Functions.V2": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7032",
+      "launchBrowser": false
+    }
+  }
+}

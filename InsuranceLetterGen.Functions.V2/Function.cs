@@ -2,19 +2,19 @@ using InsuranceLetterGen.Services.Document;
 using InsuranceLetterGen.Services.Models;
 using InsuranceLetterGen.Services.Storage;
 
-namespace InsuranceLetterGen.Functions;
+namespace InsuranceLetterGen.Functions.V2;
 
-public class Main
+public class Function
 {
     private readonly ILogger _logger;
     private readonly IBlobStorageService _blobStorageService;
     private readonly IDocumentService _documentService;
 
-    public Main(ILoggerFactory loggerFactory, IBlobStorageService blobStorageService, IDocumentService documentService)
+    public Function(ILoggerFactory loggerFactory, IBlobStorageService blobStorageService, IDocumentService documentService)
     {
         _documentService = documentService;
         _blobStorageService = blobStorageService;
-        _logger = loggerFactory.CreateLogger<Main>();
+        _logger = loggerFactory.CreateLogger<Function>();
     }
 
     [Function("InsuranceLetterGen")]

@@ -8,7 +8,7 @@ public class BlobStorageService : IBlobStorageService
     public BlobStorageService(IConfiguration configuration)
     {
         _blobServiceClient = new BlobServiceClient(configuration.GetConnectionString("DefaultBlobConnection"));
-        _blobContainerName = "insurance-letters";
+        _blobContainerName = Environment.GetEnvironmentVariable("BlobContainerName");
     }
 
     public async Task UploadBlobAsync(string blobName, Stream content)

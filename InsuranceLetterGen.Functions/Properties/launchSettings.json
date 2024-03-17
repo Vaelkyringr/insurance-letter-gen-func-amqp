@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "InsuranceLetterGen.Functions": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7024"
-    }
-  }
-}
