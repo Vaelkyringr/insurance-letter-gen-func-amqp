@@ -26,8 +26,10 @@ public class DocumentService : IDocumentService
                     .Column(x =>
                     {
                         x.Spacing(20);
+                        x.Item().Text($"Insured by: {insurance.InsurerName}");
                         x.Item().Text($"Premium: {insurance.YearlyPremium}");
                         x.Item().Text($"Period: {insurance.StartPeriod} - {insurance.EndPeriod}");
+                        x.Item().Text($"Coverages: {string.Join(", ", insurance.Coverages)}");
                         x.Item().Text(Placeholders.LoremIpsum());
                     });
 

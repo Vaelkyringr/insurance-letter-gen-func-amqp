@@ -20,7 +20,7 @@ public class Function
     [Function("InsuranceLetterGen")]
     public async Task Run([RabbitMQTrigger("Insurance", ConnectionStringSetting = "DefaultQueueConnection")] string queueItem)
     {
-        _logger.LogInformation($"C# Queue trigger function processed: {queueItem}");
+        _logger.LogInformation($"C# Queue trigger function processed");
 
         // Create letter document
         var insurance = JsonConvert.DeserializeObject<Insurance>(queueItem);
